@@ -89,6 +89,40 @@ These findings reflect real emergency cardiology diagnostics.
 
 ---
 
+# How Evaluation Metrics Work
+
+Machine learning for healthcare is evaluated differently than typical ML tasks because **false negatives** can be dangerous and **false positives** can lead to unnecessary stress or testing.  
+The following metrics appear throughout this project and are essential for understanding model performance.
+
+### Confusion Matrix Terms
+**True Positive (TP)** – correctly predicted positive case  
+**True Negative (TN)** – correctly predicted negative case  
+**False Positive (FP)** – predicted positive but actually negative  
+**False Negative (FN)** – predicted negative but actually positive  
+
+### Accuracy  
+\[
+\frac{TP + TN}{TP + TN + FP + FN}
+\]
+
+### Sensitivity (Recall)  
+\[
+\frac{TP}{TP + FN}
+\]  
+“How well do we catch real cases?”
+
+### Specificity  
+\[
+\frac{TN}{TN + FP}
+\]  
+“How well do we avoid false alarms?”
+
+These metrics matter heavily in healthcare because **missing a true case (FN)** can lead to delayed treatment, while **flagging someone incorrectly (FP)** causes stress and unnecessary follow-ups.
+
+---
+
+
+
 # Project Summary  
 
 Two different cardiac problems were modeled:
